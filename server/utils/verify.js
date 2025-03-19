@@ -1,6 +1,7 @@
 import jwt from "jsonwebtoken";
 import createError from "http-errors";
 
+// Verify token in middleware in api routes
 export const VerifyToken = (req, res, next) => { 
     const token = req.headers.authorization;
     if (!token) {

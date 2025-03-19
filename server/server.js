@@ -9,9 +9,9 @@ import TodoRoute from "./routes/todoRoutes.js";
 dotenv.config();
 
 const corsOptions = {
-  origin: "http://localhost:5173",
-  credentials: true,
-  optionsSuccessStatus: 200, 
+    origin: "http://localhost:5173",
+    credentials: true,
+    optionsSuccessStatus: 200,
 };
 
 
@@ -29,7 +29,7 @@ app.use(express.json());
 
 //routes
 app.use("/api/users", AuthRoute); //authouter will be used after api/users/authroutes
-app.use("/api/todos", TodoRoute);
+app.use("/api/todos", TodoRoute); //todoRouter will be used after api/todos/todoroutes
 
 
 

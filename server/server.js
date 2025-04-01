@@ -9,7 +9,7 @@ import TodoRoute from "./routes/todoRoutes.js";
 dotenv.config();
 
 const corsOptions = {
-    origin: "http://localhost:5173",
+    origin: "https://todo-frontend-rust.vercel.app/",
     credentials: true,
     optionsSuccessStatus: 200,
 };

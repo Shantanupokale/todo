@@ -4,7 +4,7 @@ export async function register(previousState , formData){
         const email = formData.get('email');
         const password = formData.get('password');  
         
-        const res = await fetch("http://localhost:5000/register", {
+        const res = await fetch("https://todo-rust-seven-55.vercel.app/register", {
             method: "POST",
             headers:{
                 "Content-Type":"application/json"

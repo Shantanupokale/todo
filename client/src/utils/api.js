@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:5000/api/todos";
+const BASE_URL = "https://todo-rust-seven-55.vercel.app/api/todos";
 
 
 

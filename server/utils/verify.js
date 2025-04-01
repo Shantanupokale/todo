@@ -3,7 +3,7 @@ import createError from "http-errors";
 
 // Verify token in middleware in api routes
 export const VerifyToken = (req, res, next) => { 
-    console.log("req.headers", req.headers.authorization);
+    // console.log("req.headers", req.headers.authorization);
     const token = req.headers.authorization;
     if (!token) {
         return res.status(401).json("Access denied");

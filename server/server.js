@@ -8,11 +8,11 @@ import TodoRoute from "./routes/todoRoutes.js";
 
 dotenv.config();
 
-const corsOptions = {
-    origin: "https://todo-frontend-rust.vercel.app/",
-    credentials: true,
-    optionsSuccessStatus: 200,
-};
+// const corsOptions = {
+//     origin: "",
+//     credentials: true,
+//     optionsSuccessStatus: 200,
+// };
 
 
 //initialize express app
@@ -21,7 +21,7 @@ const app = express();
 
 
 //middleware
-app.use(cors(corsOptions));
+app.use(cors());
 app.use(express.json());
 
 

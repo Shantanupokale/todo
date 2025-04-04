@@ -9,6 +9,7 @@ import Particles from "../components/ui/Particles";
 import { SkeletonLoader } from "../components/ui/SkeletonLoader";
 import { ClipboardList, Clock, Music2 } from "lucide-react"; // Icons
 import PomodoroTimer from "../components/ui/PomodoroTimer";
+import { useNavigate } from "react-router-dom";
 
 
 export default function TodoApp() {
@@ -250,19 +251,19 @@ export default function TodoApp() {
 
   {/* Logout Button */}
   <div className="mt-auto">
-    <button
-      onClick={() => {
-        localStorage.removeItem("token");
-        window.location.reload();
-      }}
-      className={`flex items-center gap-2 bg-green-600 text-black font-medium text-xs rounded-xl mt-6 transition-all duration-300
-        ${isSidebarOpen ? "px-3 py-2 self-start" : "justify-center py-3 px-3"}
-        hover:text-white hover:translate-x-1 hover:-translate-y-1 hover:shadow-[3px_3px_0px_rgba(255,255,255,0.8)]`}
-    >
-      <LogOut size={16} />
-      {isSidebarOpen && <span>Logout</span>}
-    </button>
-  </div>
+      <button
+        onClick={() => {
+          localStorage.removeItem("token");
+          navigate("/"); // Navigate to landing page
+        }}
+        className={`flex items-center gap-2 bg-green-600 text-black font-medium text-xs rounded-xl mt-6 transition-all duration-300
+          ${isSidebarOpen ? "px-3 py-2 self-start" : "justify-center py-3 px-3"}
+          hover:text-white hover:translate-x-1 hover:-translate-y-1 hover:shadow-[3px_3px_0px_rgba(255,255,255,0.8)]`}
+      >
+        <LogOut size={16} />
+        {isSidebarOpen && <span>Logout</span>}
+      </button>
+    </div>
 </aside>
 
 

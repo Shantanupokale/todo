@@ -6,7 +6,7 @@ import { useState } from "react";
 
 const Landing = () => {
   const [hoveringSignIn, setHoveringSignIn] = useState(false);
-
+  const token = localStorage.getItem("token");
   return (
     <div className="relative bg-black text-white min-h-screen flex flex-col items-center justify-center px-4 overflow-hidden">
       {/* Particle Background */}
@@ -37,7 +37,8 @@ const Landing = () => {
                         hoveringSignIn ? "bg-white text-black border border-gray-600" : "bg-primary text-black"
                       }`}
           >
-            <Link to="/register">Get Started</Link>
+             <Link to={token ? "/dashboard" : "/register"}>Get Started</Link>
+            {/* <Link to="/register">Get Started</Link> */}
           </Button>
 
           {/* Sign In Button */}

@@ -254,7 +254,7 @@ export default function TodoApp() {
       <button
         onClick={() => {
           localStorage.removeItem("token");
-          navigate("/"); // Navigate to landing page
+          window.location.href = "/"; // Navigate to landing page
         }}
         className={`flex items-center gap-2 bg-green-600 text-black font-medium text-xs rounded-xl mt-6 transition-all duration-300
           ${isSidebarOpen ? "px-3 py-2 self-start" : "justify-center py-3 px-3"}
